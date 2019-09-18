@@ -16,3 +16,16 @@
 	disp-merged-branch-list = for-each-ref --sort=committerdate --format='"%(committerdate:short)","%(authorname)","%(refname:short)"' refs/remotes --merged
 	find-merge = "!sh -c 'commit=$0 && branch=${1:-HEAD} && (git rev-list $commit..$branch --ancestry-path | cat -n; git rev-list $commit..$branch --first-parent | cat -n) | sort -k2 | uniq -f1 -d | sort -n | tail -1 | cut -f2'"
 	show-merge = "!sh -c 'merge=$(git find-merge $0 $1) && [ -n \"$merge\" ] && git show $merge'"
+[diff]
+    tool = WinMerge
+[difftool "WinMerge"]
+    path = C:/Program Files/WinMerge/WinMergeU.exe
+    cmd = \"C:/Program Files/WinMerge/WinMergeU.exe\" -f \"*.*\" -e -u -r \"$LOCAL\" \"$REMOTE\"
+[merge]
+    tool = WinMerge
+[mergetool "WinMerge"]
+    path = C:/Program Files/WinMerge/WinMergeU.exe
+    cmd = \"C:/Program Files/WinMerge/WinMergeU.exe\" -e -u \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
+[alias]
+    windiff = difftool -y -d -t WinMerge
+    winmerge = mergetool -y -t WinMerge

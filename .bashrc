@@ -1,5 +1,5 @@
 # docker comands
-alias dcn='docker-compose up -d'
+alias dcu='docker-compose up -d'
 alias dcd='docker-compose down'
 alias dcr='docker-compose restart'
 alias dp='docker ps'

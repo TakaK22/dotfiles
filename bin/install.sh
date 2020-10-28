@@ -1,5 +1,7 @@
 #!bin/bash
 
+## Macmの初期設定スクリプト
+
 # homebrewがinstallされていなかったら、homebrewをinstall
 if [ ! -e /usr/local/bin/brew ]; then
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"

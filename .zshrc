@@ -28,6 +28,8 @@ PROMPT='
 [%B%F{red}%n@%m%f%b:%F{yellow}%~%f]%F{cyan}$(__git_ps1 " (%s)")%f
 %# '
 
+# Java
+export PATH="/usr/local/opt/openjdk/bin:$PATH"
 
 # Finderで開いているディレクトリへcdするコマンド
 cdf() {

@@ -20,3 +20,6 @@ fpath=(~/.zsh/completion $fpath)
 
 autoload -U compinit
 compinit -u
+
+# alias定義
+alias his='history | grep'

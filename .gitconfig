@@ -24,3 +24,6 @@
 	review-files = diff origin/master... --name-only
 [color]
 	ui = auto
+[pull]
+	rebase = false
+	ff = only

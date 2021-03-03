@@ -27,3 +27,8 @@
 [pull]
 	rebase = false
 	ff = only
+[diff "xlsx"]
+	binary = true
+	textconv = $GOPATH/bin/git-xlsx-textconv
+[core]
+	attributesfile = /Users/kudoutakanori/.gitattributes

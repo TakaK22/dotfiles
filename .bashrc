@@ -4,3 +4,4 @@ alias dcd='docker-compose down'
 alias dcr='docker-compose restart'
 alias dp='docker ps'
 alias dx='docker exec -it'
+alias open="explorer"

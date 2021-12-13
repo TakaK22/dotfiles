@@ -9,11 +9,8 @@
 	fep = fetch --prune
 	gr = grep
 	gcap = gc --aggressive --prune=now
-	# lg = log --graph --date=iso --pretty='[%ad]%C(auto) %h%d %Cgreen%an%Creset : %s'
-	lg = log --graph --date=format:'%Y/%m/%d %H:%M:%S' --pretty='[%ad]%C(auto) %h%d %Cgreen%an%Creset : %s'
+	lg = log --graph --pretty=format:'%Cred%h%Creset - %s%C(auto)%d%Creset %Cgreen(%cr:%cd) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
 	lga = !"git lg --all"
-	lg2 = log --pretty='format:%C(yellow)%h %C(green)%cd %C(reset)%s %C(cyan)[%an]' --date=iso
-	lg = log --graph --date=format:'%Y/%m/%d %H:%M:%S' --pretty='[%ad]%C(auto) %h%d %Cgreen%an%Creset : %s' --first-parent
 	disp-merged-branch-list = for-each-ref --sort=committerdate --format='"%(committerdate:short)","%(authorname)","%(refname:short)"' refs/remotes --merged
 	find-merge = "!sh -c 'commit=$0 && branch=${1:-HEAD} && (git rev-list $commit..$branch --ancestry-path | cat -n; git rev-list $commit..$branch --first-parent | cat -n) | sort -k2 | uniq -f1 -d | sort -n | tail -1 | cut -f2'"
 	show-merge = "!sh -c 'merge=$(git find-merge $0 $1) && [ -n \"$merge\" ] && git show $merge'"

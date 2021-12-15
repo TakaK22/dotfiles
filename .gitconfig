@@ -11,7 +11,7 @@
     gcap = gc --aggressive --prune=now
     lg = log --graph --pretty=format:'%Cred%h%Creset - %s%C(auto)%d%Creset %Cgreen(%cr:%cd) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
     lga = !"git lg --all"
-    graph = log --graph --date=short --pretty=\"format:%C(yellow)%h %C(cyan)%ad %C(green)%an%Creset%x09%s %C(auto)%d%Creset\"
+    graph = log --graph --date=format:'%Y/%m/%d %H:%M:%S' --pretty=\"format:%C(yellow)%h %C(cyan)%ad %C(green)%an%Creset%x09%s %C(auto)%d%Creset\"
     disp-merged-branch-list = for-each-ref --sort=committerdate --format='"%(committerdate:short)","%(authorname)","%(refname:short)"' refs/remotes --merged
     find-merge = "!sh -c 'commit=$0 && branch=${1:-HEAD} && (git rev-list $commit..$branch --ancestry-path | cat -n; git rev-list $commit..$branch --first-parent | cat -n) | sort -k2 | uniq -f1 -d | sort -n | tail -1 | cut -f2'"
     show-merge = "!sh -c 'merge=$(git find-merge $0 $1) && [ -n \"$merge\" ] && git show $merge'"

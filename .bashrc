@@ -1,3 +1,5 @@
+alias lly="ls -l --time-style=long-iso"
+
 # docker comands
 alias dcu='docker-compose up -d'
 alias dcd='docker-compose down'

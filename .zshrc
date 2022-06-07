@@ -44,3 +44,4 @@ cdf() {
 # alias定義
 alias his='history | grep'
 alias f='open .'
+alias ls='ls --color'

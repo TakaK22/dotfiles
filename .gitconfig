@@ -13,10 +13,10 @@
 	fep = fetch --prune
 	gr = grep
 	gcap = gc --aggressive --prune=now
-  s = status
-  ss = status -s
+	s = status
+	ss = status -s
 	#lg = log --oneline
-  lg = log --pretty='format:%C(yellow)%h %C(green)%cd %C(reset)%s %C(red)%d %C(cyan)[%an]' --date=iso
+	lg = log --pretty='format:%C(yellow)%h %C(green)%cd %C(reset)%s %C(red)%d %C(cyan)[%an]' --date=iso
 	lg = log --graph --date=format:'%Y/%m/%d %H:%M:%S' --pretty='[%ad]%C(auto) %h%d %Cgreen%an%Creset : %s'
 	lga = !"git lg --all"
 	lgfp = !"git lg --first-parent"

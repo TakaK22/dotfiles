@@ -62,4 +62,4 @@ set hlsearch
 nmap <Esc><Esc> :nohlsearch<CR><Esc>
 
 " キーバインド
-inoremap <silent> jj <ESC>
+inoremap <silent> jk <ESC>

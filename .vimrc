@@ -70,6 +70,5 @@ if has('win32')
   nnoremap A A
   nnoremap I I
 endif
-" jjでinsertモードから抜ける
-inoremap <silent> jj <ESC>
-
+" jkでinsertモードから抜ける
+inoremap <silent> jk <ESC>

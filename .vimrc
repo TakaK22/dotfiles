@@ -62,4 +62,13 @@ set hlsearch
 nmap <Esc><Esc> :nohlsearch<CR><Esc>
 
 " キーバインド
+" 日本語モードのままinsertモードに移行させる
+nnoremap あ a
+nnoremap い i
+nnoremap お o
+if has('win32')
+  nnoremap A A
+  nnoremap I I
+endif
+" jkでinsertモードから抜ける
 inoremap <silent> jk <ESC>

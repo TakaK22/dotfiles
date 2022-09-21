@@ -9,6 +9,7 @@
 	cm = commit
 	df = diff
 	dfc = diff --cached
+	dfn = diff --name-only
 	fe = fetch
 	fep = fetch --prune
 	gr = grep

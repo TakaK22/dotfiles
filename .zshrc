@@ -41,6 +41,9 @@ cdf() {
   fi
 }
 
+# github CLIの補完
+eval "$(gh completion -s zsh)"
+
 # alias定義
 alias his='history | grep'
 alias f='open .'

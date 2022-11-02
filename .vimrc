@@ -63,3 +63,8 @@ nmap <Esc><Esc> :nohlsearch<CR><Esc>
 
 " キーバインド
 inoremap <silent> jj <ESC>
+
+" vim-plugの設定
+call plug#begin('~/.vim/plugged')
+call plug#end()
+

@@ -1,4 +1,7 @@
+export LANG=ja_JP.UTF-8
 alias lly="ls -l --time-style=long-iso"
+
+alias cdiff="diff -u --color"
 
 # docker comands
 alias dcu='docker-compose up -d'
